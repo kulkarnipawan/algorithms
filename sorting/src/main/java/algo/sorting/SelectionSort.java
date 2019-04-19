@@ -4,7 +4,7 @@
 package algo.sorting;
 
 /**
- * @author pawkulka
+ * @author Pawankumar Kulkarni
  *
  */
 public class SelectionSort {
