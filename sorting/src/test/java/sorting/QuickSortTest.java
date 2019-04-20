@@ -9,12 +9,13 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class QuickSortTest {
+	
+	private final Random randomGen = new Random();
+	private final QuickSort quickSort = new QuickSort();
     
 	@Test 
-    public void testQuickSort() {
-    	QuickSort quickSort = new QuickSort();
+    public void testQuickSort10() {
     	
-    	Random randomGen = new Random();
     	int[] nums = new int[10];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
@@ -31,96 +32,126 @@ public class QuickSortTest {
     						+ " ms");
     	Assert.assertArrayEquals(result, nums);
     	
-    	nums = new int[100];
+	}
+	
+	@Test 
+    public void testQuickSort100() {
+        	
+       	int[] nums = new int[100];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
     	}
     	
-    	result = Arrays.copyOf(nums, nums.length);
+    	int[] result = Arrays.copyOf(nums, nums.length);
     	Arrays.sort(result);
-    	start = System.currentTimeMillis();
+    	long start = System.currentTimeMillis();
     	quickSort.sort(nums);
-    	end = System.currentTimeMillis();
+    	long end = System.currentTimeMillis();
     	System.out.println("Quick sort for array of :" 
     						+ nums.length + ": elements took :" 
     						+ (end - start)
     						+ " ms");
     	Assert.assertArrayEquals(result, nums);
     	
-    	nums = new int[200];
+	}
+	
+	@Test 
+    public void testQuickSort200() {
+        	
+       	int[] nums = new int[200];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
     	}
     	
-    	result = Arrays.copyOf(nums, nums.length);
+    	int[] result = Arrays.copyOf(nums, nums.length);
     	Arrays.sort(result);
-    	start = System.currentTimeMillis();
+    	long start = System.currentTimeMillis();
     	quickSort.sort(nums);
-    	end = System.currentTimeMillis();
+    	long end = System.currentTimeMillis();
     	System.out.println("Quick sort for array of :" 
     						+ nums.length + ": elements took :" 
     						+ (end - start)
     						+ " ms");
     	Assert.assertArrayEquals(result, nums);
     	
-    	nums = new int[300];
+	}
+	
+	@Test 
+    public void testQuickSort300() {
+        	
+       	int[] nums = new int[300];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
     	}
     	
-    	result = Arrays.copyOf(nums, nums.length);
+    	int[] result = Arrays.copyOf(nums, nums.length);
     	Arrays.sort(result);
-    	start = System.currentTimeMillis();
+    	long start = System.currentTimeMillis();
     	quickSort.sort(nums);
-    	end = System.currentTimeMillis();
+    	long end = System.currentTimeMillis();
     	System.out.println("Quick sort for array of :" 
     						+ nums.length + ": elements took :" 
     						+ (end - start)
     						+ " ms");
     	Assert.assertArrayEquals(result, nums);
     	
-    	nums = new int[500];
+	}
+	
+	@Test 
+    public void testQuickSort500() {
+        	
+       	int[] nums = new int[500];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
     	}
     	
-    	result = Arrays.copyOf(nums, nums.length);
+    	int[] result = Arrays.copyOf(nums, nums.length);
     	Arrays.sort(result);
-    	start = System.currentTimeMillis();
+    	long start = System.currentTimeMillis();
     	quickSort.sort(nums);
-    	end = System.currentTimeMillis();
+    	long end = System.currentTimeMillis();
     	System.out.println("Quick sort for array of :" 
     						+ nums.length + ": elements took :" 
     						+ (end - start)
     						+ " ms");
     	Assert.assertArrayEquals(result, nums);
     	
-    	nums = new int[1000];
+	}
+	
+	@Test 
+    public void testQuickSort1000() {
+        	
+       	int[] nums = new int[1000];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
     	}
     	
-    	result = Arrays.copyOf(nums, nums.length);
+    	int[] result = Arrays.copyOf(nums, nums.length);
     	Arrays.sort(result);
-    	start = System.currentTimeMillis();
+    	long start = System.currentTimeMillis();
     	quickSort.sort(nums);
-    	end = System.currentTimeMillis();
+    	long end = System.currentTimeMillis();
     	System.out.println("Quick sort for array of :" 
     						+ nums.length + ": elements took :" 
     						+ (end - start)
     						+ " ms");
     	Assert.assertArrayEquals(result, nums);
     	
-    	nums = new int[10000];
+	}
+	
+	@Test 
+    public void testQuickSort10000() {
+        	
+       	int[] nums = new int[10000];
     	for(int i = 0;i < nums.length;i++) {
     		nums[i] = randomGen.nextInt();
     	}
     	
-    	result = Arrays.copyOf(nums, nums.length);
+    	int[] result = Arrays.copyOf(nums, nums.length);
     	Arrays.sort(result);
-    	start = System.currentTimeMillis();
+    	long start = System.currentTimeMillis();
     	quickSort.sort(nums);
-    	end = System.currentTimeMillis();
+    	long end = System.currentTimeMillis();
     	System.out.println("Quick sort for array of :" 
     						+ nums.length + ": elements took :" 
     						+ (end - start)
