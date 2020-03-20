@@ -15,6 +15,7 @@ public class TimSort {
 		final int CHUNK = 32;
 		int i,j,middle,end;
 		if(nums!=null && nums.length>1) {
+			//Sort chunks of array using insertion sort
 			for(i=0;i<nums.length;i+=CHUNK) {
 				end = i+CHUNK;
 				if(end>nums.length) {

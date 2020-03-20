@@ -13,7 +13,9 @@ public class HeapSort {
 		if(nums != null && nums.length > 1) {
 			int temp;
 			for(int i=0; i<nums.length-1; i++) {
+				//Create max heap of size n-i
 				createMaxHeap(nums, nums.length-i);
+				//Swap max element from top of heap to end of array
 				if(nums[0] != nums[nums.length-i-1]) {
 					temp = nums[0];
 					nums[0] = nums[nums.length-i-1];
